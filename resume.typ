@@ -42,7 +42,7 @@
 ]
 
 #resume-entry(
-  title: "Assistant Directory",
+  title: "Assistant Director",
   location: "Silver Spring, MD",
   date: "2024 - 2025",
   description: "Lumina Studio Theatre",
