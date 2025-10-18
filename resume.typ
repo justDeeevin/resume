@@ -129,13 +129,24 @@
 #resume-skill-item(
   "Soft skills",
   (
+    strong("Fast learner"),
     "Critical thinking",
     "Communication",
     "Teamwork",
     "Problem solving",
-    "Fast learner",
   ),
 )
+#resume-skill-item(
+  "Tools",
+  (
+    strong("Linux"),
+    strong("Git"),
+    "Systems Tool Kit (STK)",
+    "Onshape",
+    "Autodesk Inventor",
+  ),
+)
+
 // spacing fix, not needed if you use `resume-skill-grid`
 #block(below: 0.65em)
 
@@ -149,18 +160,15 @@
 )
 
 #resume-entry(
+  title: "Montgomery College",
+  location: "Rockville, MD",
+  date: "August - December 2024",
+  description: "Dual Enrollment",
+)
+
+#resume-entry(
   title: "Wheaton High School",
   location: "Silver Spring, MD",
   date: "2021 - 2025",
   description: "3.9 GPA (4.79 Weighted)",
 )
-
-#resume-entry(
-  title: "Montgomery College",
-  location: "Rockville, MD",
-  date: "August - December 2024",
-)
-
-#resume-item[
-  Studied during high school as a dual enrollment student
-]
