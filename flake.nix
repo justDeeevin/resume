@@ -1,23 +1,100 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  outputs =
-    { nixpkgs, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
-      lib = pkgs.lib;
-    in
-    {
-      devShells.${system}.default = pkgs.mkShell {
-        TYPST_FONT_PATHS = lib.concatStringsSep ":" (
-          with pkgs;
-          [
-            roboto
-            source-sans
-            source-sans-pro
-            font-awesome
-          ]
-        );
-      };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    typix = {
+      url = "github:loqusion/typix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs =
+    {
+      nixpkgs,
+      typix,
+      flake-utils,
+      ...
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+
+        typixLib = typix.lib.${system};
+
+        src = typixLib.cleanTypstSource ./.;
+        unstable_typstPackages = [
+          {
+            name = "modern-cv";
+            version = "0.9.0";
+            hash = "sha256-zCv2UABp3lBBbYthrSXD4OXWaiIjMdwRPQbq5a8AlUk=";
+          }
+          {
+            name = "fontawesome";
+            version = "0.6.0";
+            hash = "sha256-dgb+YAYLEKgMMEWa8yelMvRdEoesPj5HI+70w3mCUcQ=";
+          }
+          {
+            name = "linguify";
+            version = "0.4.2";
+            hash = "sha256-kuoK0r29kvc0rvDIQWELp/fZUm3Bzxc5W8M/YMU3lvg=";
+          }
+        ];
+        commonArgs = {
+          typstSource = "resume.typ";
+
+          fontPaths = [
+            "${pkgs.roboto}/share/fonts/truetype"
+            "${pkgs.source-sans}/share/fonts/truetype"
+            "${pkgs.source-sans-pro}/share/fonts/truetype"
+            "${pkgs.font-awesome}/share/fonts/truetype"
+          ];
+
+          virtualPaths = [ ];
+
+        };
+
+        build-drv = typixLib.buildTypstProject (
+          commonArgs
+          // {
+            inherit src unstable_typstPackages;
+          }
+        );
+
+        build-script = typixLib.buildTypstProjectLocal (
+          commonArgs
+          // {
+            inherit src unstable_typstPackages;
+          }
+        );
+
+        watch-script = typixLib.watchTypstProject commonArgs;
+      in
+      {
+        checks = {
+          inherit build-drv build-script watch-script;
+        };
+
+        packages.default = build-drv;
+
+        apps = rec {
+          default = watch;
+          build = flake-utils.lib.mkApp {
+            drv = build-script;
+          };
+          watch = flake-utils.lib.mkApp {
+            drv = watch-script;
+          };
+        };
+
+        devShells.default = typixLib.devShell {
+          inherit (commonArgs) fontPaths virtualPaths;
+          packages = [
+            watch-script
+          ];
+        };
+      }
+    );
 }
