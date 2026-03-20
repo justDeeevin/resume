@@ -6,7 +6,7 @@
     lastname: "Droddy",
     email: "devin@justdeeevin.dev",
     homepage: "https://justdeeevin.dev",
-    phone: "(+1) 202-697-2878",
+    phone: "(202) 697-2878",
     github: "justDeeevin",
     twitter: "justDeeevin",
     linkedin: "devindroddy",
@@ -14,6 +14,7 @@
     positions: (
       "Systems Programmer",
       "Web Developer",
+      "Open Source Developer"
     ),
   ),
   keywords: ("Engineer", "Architect"),
@@ -80,14 +81,25 @@
 = Projects
 
 #resume-entry(
+  title: "Gardener Harvesting",
+  location: github-link("community-cheer/gardner-harvesting"),
+  date: "Summer 2024",
+  description: "Designer/Developer",
+)
+
+#resume-item[
+  Designed and developed a mobile app for #link("https://www.communitycheer.org/long-branch-gardeners-1")[Long Branch Gardeners] volunteers to track the crops they harvest. Users and data stored in a Firebase backend.
+]
+
+#resume-entry(
   title: "NuhxBoard",
-  location: [#github-link("justdeeevin/nuhxboard")],
+  location: github-link("justdeeevin/nuhxboard"),
   date: "February 2024 - Present",
   description: "Developer",
 )
 
 #resume-item[
-  Cross-platform real-time input visualizer with extreme customizability written in (mostly async) Rust with the #link("https://iced.rs")[Iced GUI framework]. Created as a successor to #link("https://github.com/thonoht/nohboard")[NohBoard].
+  Cross-platform real-time input visualizer with extreme customizability written in (mostly async) Rust with the #link("https://iced.rs")[Iced GUI framework].
 ]
 
 #resume-entry(
@@ -102,26 +114,57 @@
 ]
 
 #resume-entry(
-  title: "Gardener Harvesting",
-  location: [#github-link("community-cheer/gardner-harvesting")],
-  date: "Summer 2024",
-  description: "Designer/Developer",
+  title: "BYOR (Bring Your Own Runtime)",
+  location: github-link("justdeeevin/byor"),
+  date: "December 2025",
+  description: "Developer",
 )
 
 #resume-item[
-  Designed and developed a mobile app for #link("https://www.communitycheer.org/long-branch-gardeners-1")[Long Branch Gardeners] volunteers to track the crops they harvest. Users and data stored in a Firebase backend.
+  Rust library abstracting over common runtime-specific async functionality such as task spawning and synchronization primitives, allowing for libraries to implement complex async behavior without locking their users into any specific runtime.
+]
+
+#resume-entry(
+  title: "ratatui-elm",
+  location: github-link("justdeeevin/ratatui-elm"),
+  date: "July - December 2025",
+  description: "Developer",
+)
+
+#resume-item[
+  Rust library providing a framework for using #link("https://guide.elm-lang.org/architecture/")[the ELM architecture] to build #link("https://ratatui.rs")[ratatui] TUI applications.
+]
+
+#resume-entry(
+  title: "nixpkgs",
+  location: github-link("nixos/nixpkgs"),
+  date: "December 2024 - Present",
+  description: "Package contributor & maintainer",
+)
+
+#let nixpkgs-link(package-name) = link("https://search.nixos.org/packages?channel=unstable&query=" + package-name)[#text(package-name)]
+
+#resume-item[
+  Contributing and maintaining new packages for the #link("https://nixos.org")[NixOS] distribution. Packages maintained:
+  - #nixpkgs-link("syspower")
+  - #nixpkgs-link("ashell")
+  - #nixpkgs-link("textlsp")
+  - #nixpkgs-link("ugdb")
 ]
 
 = Skills
 
 #resume-skill-item(
-  "Programming Languages",
+  "Programming",
   (
-    strong("Rust"),
-    strong("Nix"),
-    strong("TypeScript"),
+    "Rust",
+    "Nix",
+    "TypeScript",
+    "Svelte",
+    "React",
     "Java",
     "C",
+    "C++",
     "C#",
     "Python",
   ),
@@ -129,7 +172,7 @@
 #resume-skill-item(
   "Soft skills",
   (
-    strong("Fast learner"),
+    "Fast learner",
     "Critical thinking",
     "Communication",
     "Teamwork",
@@ -139,11 +182,11 @@
 #resume-skill-item(
   "Tools",
   (
-    strong("Linux"),
-    strong("Git"),
-    "Systems Tool Kit (STK)",
+    "Linux",
+    "Git",
     "Onshape",
     "Autodesk Inventor",
+    "KiCad",
   ),
 )
 
@@ -156,7 +199,7 @@
   title: "University of Maryland",
   location: "College Park, MD",
   date: "August 2025 - 2029 (anticipated)",
-  description: "Anticipated B.S. in Computer Science",
+  description: "Anticipated B.S. in Computer Science and Immersive Media Design",
 )
 
 #resume-entry(
