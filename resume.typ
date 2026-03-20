@@ -32,7 +32,7 @@
 #resume-entry(
   title: "Platform Manager (Part Time)",
   location: "Remote",
-  date: "August 2024 - Present",
+  date: "August 2024 - December 2025",
   description: "Pyro Inc.",
   title-link: "https://pyro.host",
 )
@@ -155,7 +155,7 @@
 #resume-entry(
   title: "University of Maryland",
   location: "College Park, MD",
-  date: "August 2025 - Present",
+  date: "August 2025 - 2029 (anticipated)",
   description: "Anticipated B.S. in Computer Science",
 )
 
