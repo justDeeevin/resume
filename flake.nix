@@ -36,6 +36,7 @@
             version = "0.6.0";
             hash = "sha256-dgb+YAYLEKgMMEWa8yelMvRdEoesPj5HI+70w3mCUcQ=";
           }
+
           {
             name = "linguify";
             version = "0.4.2";
@@ -47,13 +48,10 @@
 
           fontPaths = [
             "${pkgs.roboto}/share/fonts/truetype"
-            "${pkgs.source-sans}/share/fonts/truetype"
             "${pkgs.source-sans-pro}/share/fonts/truetype"
-            "${pkgs.font-awesome}/share/fonts/truetype"
+            "${pkgs.source-sans}/share/fonts/truetype"
+            "${pkgs.font-awesome}/share/fonts/opentype"
           ];
-
-          virtualPaths = [ ];
-
         };
 
         build-drv = typixLib.buildTypstProject (
@@ -90,7 +88,7 @@
         };
 
         devShells.default = typixLib.devShell {
-          inherit (commonArgs) fontPaths virtualPaths;
+          inherit (commonArgs) fontPaths;
           packages = [
             watch-script
           ];
