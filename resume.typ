@@ -1,24 +1,8 @@
 #import "@preview/modern-cv:0.10.0": *
-
-#let show-twt = false
+#import "author.typ": author
 
 #show: resume.with(
-  author: (
-    firstname: "Devin",
-    lastname: "Droddy",
-    phone: "(202) 697-2878",
-    email: "devin@justdeeevin.dev",
-    homepage: "https://justdeeevin.dev",
-    github: "justDeeevin",
-    linkedin: "devindroddy",
-    positions: (
-      "Systems Programmer",
-      "Web Developer",
-      "Open Source Contributor",
-    ),
-    address: "Silver Spring, MD",
-  )
-    + (if show-twt { (twitter: "justDeeevin") } else { (:) }),
+  author: author,
   profile-picture: none,
   show-footer: false,
   paper-size: "us-letter",
@@ -85,7 +69,7 @@
 )
 
 #resume-item[
-  Designed and developed a mobile app for #link("https://www.communitycheer.org/long-branch-gardeners-1")[Long Branch Gardeners] volunteers to track the crops they harvest. Users and data stored in a Firebase backend.
+  Designed and developed a React Native mobile app for #link("https://www.communitycheer.org/long-branch-gardeners-1")[Long Branch Gardeners] volunteers to track the crops they harvest. Users and data stored in a Firebase backend.
 ]
 
 #resume-entry(
@@ -144,7 +128,7 @@
 )[#text(package-name)]
 
 #resume-item[
-  Contributing and maintaining new packages for the #link("https://nixos.org")[NixOS] distribution. Packages maintained:
+  Contributing and maintaining new software packages for the #link("https://nixos.org")[NixOS] Linux distribution. Packages maintained:
   - #nixpkgs-link("syspower")
   - #nixpkgs-link("ashell")
   - #nixpkgs-link("textlsp")
@@ -160,10 +144,10 @@
     "Nix",
     "TypeScript",
     "Svelte",
+    "Haskell",
     "React",
     "Java",
     "C",
-    "C++",
     "C#",
     "Python",
   ),
@@ -171,7 +155,7 @@
 #resume-skill-item(
   "Soft skills",
   (
-    "Fast learner",
+    "Adaptability",
     "Critical thinking",
     "Communication",
     "Teamwork",
@@ -198,7 +182,7 @@
   title: "University of Maryland",
   location: "College Park, MD",
   date: "August 2025 - 2029 (anticipated)",
-  description: "Anticipated B.S. in Computer Science and Immersive Media Design",
+  description: "Anticipated B.S. in Computer Science",
 )
 
 #resume-entry(

@@ -93,6 +93,11 @@
           packages = [
             watch-script
           ];
+          shellHook =
+            # bash
+            ''
+              export TYPST_ROOT="$PWD"
+            '';
         };
       }
     );
