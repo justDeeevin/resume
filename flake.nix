@@ -28,8 +28,8 @@
         unstable_typstPackages = [
           {
             name = "modern-cv";
-            version = "0.9.0";
-            hash = "sha256-zCv2UABp3lBBbYthrSXD4OXWaiIjMdwRPQbq5a8AlUk=";
+            version = "0.10.0";
+            hash = "sha256-BqnugXI04bdlkOWe2RvSBwDnoTZMYk/1RQXnFpXdBvs=";
           }
           {
             name = "fontawesome";
@@ -39,9 +39,10 @@
 
           {
             name = "linguify";
-            version = "0.4.2";
-            hash = "sha256-kuoK0r29kvc0rvDIQWELp/fZUm3Bzxc5W8M/YMU3lvg=";
+            version = "0.5.0";
+            hash = "sha256-rkHC4vzlVvPb5F4Wmylk+xb2dbJjR3Ip5KephGmdlUM=";
           }
+
         ];
         commonArgs = {
           typstSource = "resume.typ";

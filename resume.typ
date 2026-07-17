@@ -1,4 +1,4 @@
-#import "@preview/modern-cv:0.9.0": *
+#import "@preview/modern-cv:0.10.0": *
 
 #show: resume.with(
   author: (
@@ -14,7 +14,7 @@
     positions: (
       "Systems Programmer",
       "Web Developer",
-      "Open Source Developer"
+      "Open Source Developer",
     ),
   ),
   keywords: ("Engineer", "Architect"),
@@ -142,7 +142,9 @@
   description: "Package contributor & maintainer",
 )
 
-#let nixpkgs-link(package-name) = link("https://search.nixos.org/packages?channel=unstable&query=" + package-name)[#text(package-name)]
+#let nixpkgs-link(package-name) = link(
+  "https://search.nixos.org/packages?channel=unstable&query=" + package-name,
+)[#text(package-name)]
 
 #resume-item[
   Contributing and maintaining new packages for the #link("https://nixos.org")[NixOS] distribution. Packages maintained:
