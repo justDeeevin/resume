@@ -1,31 +1,28 @@
 #import "@preview/modern-cv:0.10.0": *
 
+#let show-twt = false
+
 #show: resume.with(
   author: (
     firstname: "Devin",
     lastname: "Droddy",
+    phone: "(202) 697-2878",
     email: "devin@justdeeevin.dev",
     homepage: "https://justdeeevin.dev",
-    phone: "(202) 697-2878",
     github: "justDeeevin",
-    twitter: "justDeeevin",
     linkedin: "devindroddy",
-    address: "Silver Spring, MD",
     positions: (
       "Systems Programmer",
       "Web Developer",
-      "Open Source Developer",
+      "Open Source Contributor",
     ),
-  ),
-  keywords: ("Engineer", "Architect"),
-  description: "Devin Droddy Resume",
+    address: "Silver Spring, MD",
+  )
+    + (if show-twt { (twitter: "justDeeevin") } else { (:) }),
   profile-picture: none,
-  date: datetime.today().display(),
-  language: "en",
-  colored-headers: true,
   show-footer: false,
-  show-address-icon: true,
   paper-size: "us-letter",
+  show-address-icon: true,
 )
 
 = Experience
