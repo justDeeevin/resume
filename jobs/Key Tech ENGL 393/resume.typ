@@ -11,54 +11,24 @@
 
 = Skills
 
-#resume-skill-item(
-  "Programming",
-  (
-    "Rust",
-    "C",
-    "Nix",
-    "TypeScript",
-    "Svelte",
-    "React",
-    "Haskell",
-    "Java",
-    "C#",
-    "Python",
-  ),
-)
-#resume-skill-item(
-  "Soft skills",
-  (
-    "Adaptability",
-    "Creativity",
-    "Communication",
-    "Collaboration",
-    "Problem-solving",
-  ),
-)
-#resume-skill-item(
-  "Tools",
-  (
-    "Linux",
-    "Git",
-    "Onshape",
-    "Autodesk Inventor",
-    "KiCad",
-  ),
-)
-
-= Projects
-
-#resume-entry(
-  title: "Gardener Harvesting",
-  location: github-link("community-cheer/gardner-harvesting"),
-  date: "Summer 2024",
-  description: "Designer/Developer",
-)
-
+#resume-entry(title: "Versatile Software Engineering")
 #resume-item[
-  Designed and developed a React Native mobile app for #link("https://www.communitycheer.org/long-branch-gardeners-1")[Long Branch Gardeners] volunteers to track the crops they harvest. Users and data stored in a Firebase backend.
+  - Extensive experience writing Rust code both professionally and for personal projects
+    - Led development of secure distributed systems at scale
+    - High-performance desktop and terminal applications, ergonomic and solution-oriented libraries, and async embedded firmware, among other personal projects
+  - Low-level C application development in university coursework
+  - Embedded C++ development for UMD rocketry team
+  - Familiarity with various other languages and frameworks through experimentation
 ]
+
+#resume-entry(title: "Leadership and Collaboration")
+#resume-item[
+  - Guided team of professional engineers through the development of infrastructure-as-a-service product serving thousands of users
+  - Instructed and directed high-school aged actors in Shakespeare and other classical theatre
+  - Extensive open-source contribution portfolio
+]
+
+= Notable Works
 
 #resume-entry(
   title: "NuhxBoard",
@@ -69,17 +39,6 @@
 
 #resume-item[
   Cross-platform real-time input visualizer with extreme customizability written in (mostly async) Rust with the #link("https://iced.rs")[Iced GUI framework].
-]
-
-#resume-entry(
-  title: "serde-beve",
-  location: github-link("justdeeevin/serde-beve"),
-  date: "June - September 2025",
-  description: "Developer",
-)
-
-#resume-item[
-  Rust library for the serialization and deserialization of the #link("https://github.com/beve-org/beve")[BEVE] binary data format using the serde framework.
 ]
 
 #resume-entry(
@@ -113,14 +72,7 @@
   description: "Dual Enrollment",
 )
 
-#resume-entry(
-  title: "Wheaton High School",
-  location: "Silver Spring, MD",
-  date: "2021 - 2025",
-  description: "3.9 GPA (4.79 Weighted)",
-)
-
-= Experience
+= Professional Experience
 
 #resume-entry(
   title: "Platform Manager (Part Time)",

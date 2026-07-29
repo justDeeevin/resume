@@ -5,21 +5,19 @@
   author: author,
   profile-picture: none,
   show-footer: false,
-  // TODO: maybe?
-  signature: none,
   show-address-icon: true,
 )
 
 #hiring-entity-info(
   entity-info: (
-    target: "Key Tech Recruitment",
+    target: "",
     name: "Key Tech Inc.",
     street-address: "40 E. Cross Street",
     city: "Baltimore, MD 21230",
   ),
 )
 
-Dear Hiring Professionals,
+Dear Key Tech Hiring Team,
 
 In searching for a place to go following the completion of my undergraduate studies, I came across your announcement of an opening for a computer engineer. The description of both the position and the company felt like a strong match with me and my work. The values and environment at your company are exactly what I'm looking for in a place of employment, and I'm confident that they will help me thrive as a member of your team.
 
